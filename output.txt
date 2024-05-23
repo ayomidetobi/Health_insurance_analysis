@@ -1,0 +1,513 @@
+[1] "C:/Users/HP/Documents/R folder/HealthInsurance"
+   age    sex    bmi children smoker    region   charges
+1   19 female 27.900        0    yes southwest 16884.924
+2   18   male 33.770        1     no southeast  1725.552
+3   28   male 33.000        3     no southeast  4449.462
+4   33   male 22.705        0     no northwest 21984.471
+5   32   male 28.880        0     no northwest  3866.855
+6   31 female 25.740        0     no southeast  3756.622
+7   46 female 33.440        1     no southeast  8240.590
+8   37 female 27.740        3     no northwest  7281.506
+9   37   male 29.830        2     no northeast  6406.411
+10  60 female 25.840        0     no northwest 28923.137
+[1] 1338
+
+ Variables sorted by number of missings: 
+ Variable Count
+      age     0
+      sex     0
+      bmi     0
+ children     0
+   smoker     0
+   region     0
+  charges     0
+[1] "SD"
+[1] 14.04996
+[1] 6.098187
+[1] 1.205493
+[1] 0.5001596
+[1] 1.104885
+[1] 12110.01
+[1] 0.403694
+[1] "mode percentage"
+[1] 18
+[1] 32.3
+[1] 0
+[1] 0
+[1] 2
+[1] 1639.563
+[1] 0
+[1] 5.156951
+[1] 0.9715994
+[1] 42.89985
+[1] 50.52317
+[1] 27.20478
+[1] 0.1494768
+[1] 79.52167
+[1] "range"
+[1] 46
+[1] 37.17
+[1] 5
+[1] 1
+[1] 3
+[1] 62648.55
+[1] 1
+      age             sex              bmi           children    
+ Min.   :18.00   Min.   :0.0000   Min.   :15.96   Min.   :0.000  
+ 1st Qu.:27.00   1st Qu.:0.0000   1st Qu.:26.30   1st Qu.:0.000  
+ Median :39.00   Median :0.0000   Median :30.40   Median :1.000  
+ Mean   :39.21   Mean   :0.4948   Mean   :30.66   Mean   :1.095  
+ 3rd Qu.:51.00   3rd Qu.:1.0000   3rd Qu.:34.69   3rd Qu.:2.000  
+ Max.   :64.00   Max.   :1.0000   Max.   :53.13   Max.   :5.000  
+     smoker           region         charges     
+ Min.   :0.0000   Min.   :1.000   Min.   : 1122  
+ 1st Qu.:0.0000   1st Qu.:2.000   1st Qu.: 4740  
+ Median :0.0000   Median :2.000   Median : 9382  
+ Mean   :0.2048   Mean   :2.484   Mean   :13270  
+ 3rd Qu.:0.0000   3rd Qu.:3.000   3rd Qu.:16640  
+ Max.   :1.0000   Max.   :4.000   Max.   :63770  
+'data.frame':	1338 obs. of  7 variables:
+ $ age     : int  19 18 28 33 32 31 46 37 37 60 ...
+ $ sex     : num  1 0 0 0 0 1 1 1 0 1 ...
+ $ bmi     : num  27.9 33.8 33 22.7 28.9 ...
+ $ children: int  0 1 3 0 0 0 1 3 2 0 ...
+ $ smoker  : num  1 0 0 0 0 0 0 0 0 0 ...
+ $ region  : num  1 2 2 3 3 2 2 3 4 3 ...
+ $ charges : num  16885 1726 4449 21984 3867 ...
+NULL
+  age sex    bmi children smoker region   charges age_category bmi_category
+1  19   1 27.900        0      1      1 16884.924            1            2
+2  18   0 33.770        1      0      2  1725.552            1            2
+3  28   0 33.000        3      0      2  4449.462            2            2
+4  33   0 22.705        0      0      3 21984.471            2            1
+5  32   0 28.880        0      0      3  3866.855            2            2
+6  31   1 25.740        0      0      2  3756.622            2            2
+
+	Pearson's Chi-squared test
+
+data:  chi_sex_region
+X-squared = 0.43514, df = 3, p-value = 0.9329
+
+
+	Pearson's Chi-squared test
+
+data:  chi_sex_age
+X-squared = 0.47907, df = 4, p-value = 0.9755
+
+
+	Pearson's Chi-squared test
+
+data:  chi_sex_bmi
+X-squared = 2.4703, df = 3, p-value = 0.4807
+
+
+	Pearson's Chi-squared test
+
+data:  chi_sex_children
+X-squared = 0.73521, df = 5, p-value = 0.981
+
+
+	Pearson's Chi-squared test with Yates' continuity correction
+
+data:  chi_sex_smoker
+X-squared = 7.3929, df = 1, p-value = 0.006548
+
+
+	Pearson's Chi-squared test
+
+data:  chi_children_age
+X-squared = 203.3, df = 20, p-value < 2.2e-16
+
+
+	Pearson's Chi-squared test
+
+data:  chi_children_bmi
+X-squared = 23.385, df = 15, p-value = 0.07629
+
+
+	Pearson's Chi-squared test
+
+data:  chi_children_region
+X-squared = 13.773, df = 15, p-value = 0.5428
+
+
+	Pearson's Chi-squared test
+
+data:  chi_children_smoker
+X-squared = 6.8877, df = 5, p-value = 0.2291
+
+
+	Pearson's Chi-squared test
+
+data:  chi_region_age
+X-squared = 0.3991, df = 12, p-value = 1
+
+
+	Pearson's Chi-squared test
+
+data:  chi_region_bmi
+X-squared = 113.47, df = 9, p-value < 2.2e-16
+
+
+	Pearson's Chi-squared test
+
+data:  chi_region_smoker
+X-squared = 7.3435, df = 3, p-value = 0.06172
+
+
+	Pearson's Chi-squared test
+
+data:  chi_smoker_age
+X-squared = 3.3887, df = 4, p-value = 0.495
+
+
+	Pearson's Chi-squared test
+
+data:  chi_smoker_bmi
+X-squared = 2.4134, df = 3, p-value = 0.4911
+
+
+	Kruskal-Wallis rank sum test
+
+data:  charges by sex
+Kruskal-Wallis chi-squared = 0.1204, df = 1, p-value = 0.7286
+
+
+	Kruskal-Wallis rank sum test
+
+data:  charges by children
+Kruskal-Wallis chi-squared = 29.487, df = 5, p-value = 1.86e-05
+
+
+	Kruskal-Wallis rank sum test
+
+data:  charges by smoker
+Kruskal-Wallis chi-squared = 588.52, df = 1, p-value < 2.2e-16
+
+
+	Kruskal-Wallis rank sum test
+
+data:  charges by region
+Kruskal-Wallis chi-squared = 4.7342, df = 3, p-value = 0.1923
+
+
+	Asymptotic one-sample Kolmogorov-Smirnov test
+
+data:  charges
+D = 0.18846, p-value < 2.2e-16
+alternative hypothesis: two-sided
+
+
+	Asymptotic one-sample Kolmogorov-Smirnov test
+
+data:  age
+D = 0.078945, p-value = 1.143e-07
+alternative hypothesis: two-sided
+
+
+	Asymptotic one-sample Kolmogorov-Smirnov test
+
+data:  data$sex
+D = 0.34395, p-value < 2.2e-16
+alternative hypothesis: two-sided
+
+
+	Asymptotic one-sample Kolmogorov-Smirnov test
+
+data:  bmi
+D = 0.0261, p-value = 0.3218
+alternative hypothesis: two-sided
+
+
+	Asymptotic one-sample Kolmogorov-Smirnov test
+
+data:  children
+D = 0.24713, p-value < 2.2e-16
+alternative hypothesis: two-sided
+
+
+	Asymptotic one-sample Kolmogorov-Smirnov test
+
+data:  data$smoker
+D = 0.48924, p-value < 2.2e-16
+alternative hypothesis: two-sided
+
+
+	Asymptotic one-sample Kolmogorov-Smirnov test
+
+data:  data$region
+D = 0.18437, p-value < 2.2e-16
+alternative hypothesis: two-sided
+
+[1] "cor test age and bmi"
+[1] 0.107736
+
+	Spearman's rank correlation rho
+
+data:  age and bmi
+S = 356213358, p-value = 7.859e-05
+alternative hypothesis: true rho is not equal to 0
+sample estimates:
+     rho 
+0.107736 
+
+                      age          sex          bmi    children       smoker
+age           1.000000000  0.020855872  0.109271882  0.04246900 -0.025018752
+sex           0.020855872  1.000000000 -0.046371151 -0.01716298 -0.076184817
+bmi           0.109271882 -0.046371151  1.000000000  0.01275890  0.003750426
+children      0.042468999 -0.017162978  0.012758901  1.00000000  0.007673120
+smoker       -0.025018752 -0.076184817  0.003750426  0.00767312  1.000000000
+region       -0.002127313  0.004588385 -0.157565849 -0.01656945  0.002180682
+charges       0.299008193 -0.057292062  0.198340969  0.06799823  0.787251430
+age_category  0.980967865  0.018859360  0.103081440  0.04742282 -0.033691842
+bmi_category  0.112664980 -0.041952211  0.905984622 -0.01156274  0.006460878
+                   region      charges age_category bmi_category
+age          -0.002127313  0.299008193  0.980967865  0.112664980
+sex           0.004588385 -0.057292062  0.018859360 -0.041952211
+bmi          -0.157565849  0.198340969  0.103081440  0.905984622
+children     -0.016569446  0.067998227  0.047422817 -0.011562739
+smoker        0.002180682  0.787251430 -0.033691842  0.006460878
+region        1.000000000  0.006208235  0.001022655 -0.151808122
+charges       0.006208235  1.000000000  0.283195113  0.180483661
+age_category  0.001022655  0.283195113  1.000000000  0.106687204
+bmi_category -0.151808122  0.180483661  0.106687204  1.000000000
+[1] 0.5343921
+
+	Spearman's rank correlation rho
+
+data:  age and charges
+S = 185881923, p-value < 2.2e-16
+alternative hypothesis: true rho is not equal to 0
+sample estimates:
+      rho 
+0.5343921 
+
+[1] 0.1193959
+
+	Spearman's rank correlation rho
+
+data:  bmi and charges
+S = 351558456, p-value = 1.193e-05
+alternative hypothesis: true rho is not equal to 0
+sample estimates:
+      rho 
+0.1193959 
+
+ int [1:1338] 0 1 3 0 0 0 1 3 2 0 ...
+
+Call:
+lm(formula = charges ~ ., data = data)
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-11349  -2884   -948   1358  30018 
+
+Coefficients:
+              Estimate Std. Error t value Pr(>|t|)    
+(Intercept)  -14301.23    1342.47 -10.653  < 2e-16 ***
+age             314.64      60.89   5.167 2.74e-07 ***
+sex             126.90     332.90   0.381 0.703112    
+bmi             375.51      64.40   5.831 6.92e-09 ***
+children        477.53     137.96   3.462 0.000554 ***
+smoker        23804.11     412.42  57.718  < 2e-16 ***
+region          352.96     152.01   2.322 0.020387 *  
+age_category   -581.86     609.20  -0.955 0.339693    
+bmi_category   -432.74     578.83  -0.748 0.454826    
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 6061 on 1329 degrees of freedom
+Multiple R-squared:  0.751,	Adjusted R-squared:  0.7495 
+F-statistic: 501.1 on 8 and 1329 DF,  p-value: < 2.2e-16
+
+         age          sex          bmi     children       smoker       region 
+   26.639893     1.009044     5.613996     1.006618     1.008878     1.026700 
+age_category bmi_category 
+   26.627940     5.607526 
+     age      sex      bmi children   smoker   region 
+1.015394 1.008889 1.040608 1.002482 1.006466 1.025966 
+
+Call:
+lm(formula = charges ~ ., data = new_data)
+
+Residuals:
+   Min     1Q Median     3Q    Max 
+-11343  -2807  -1017   1408  29752 
+
+Coefficients:
+             Estimate Std. Error t value Pr(>|t|)    
+(Intercept) -13361.12    1087.67 -12.284  < 2e-16 ***
+age            257.29      11.89  21.647  < 2e-16 ***
+sex            131.11     332.81   0.394 0.693681    
+bmi            332.57      27.72  11.997  < 2e-16 ***
+children       479.37     137.64   3.483 0.000513 ***
+smoker       23820.43     411.84  57.839  < 2e-16 ***
+region         353.64     151.93   2.328 0.020077 *  
+---
+Signif. codes:  0 '***' 0.001 '**' 0.01 '*' 0.05 '.' 0.1 ' ' 1
+
+Residual standard error: 6060 on 1331 degrees of freedom
+Multiple R-squared:  0.7507,	Adjusted R-squared:  0.7496 
+F-statistic: 668.1 on 6 and 1331 DF,  p-value: < 2.2e-16
+
+      age             sex              bmi           children    
+ Min.   :18.00   Min.   :0.0000   Min.   :15.96   Min.   :0.000  
+ 1st Qu.:27.00   1st Qu.:0.0000   1st Qu.:26.30   1st Qu.:0.000  
+ Median :39.00   Median :0.0000   Median :30.40   Median :1.000  
+ Mean   :39.21   Mean   :0.4948   Mean   :30.66   Mean   :1.095  
+ 3rd Qu.:51.00   3rd Qu.:1.0000   3rd Qu.:34.69   3rd Qu.:2.000  
+ Max.   :64.00   Max.   :1.0000   Max.   :53.13   Max.   :5.000  
+     smoker           region         charges       age_category  
+ Min.   :0.0000   Min.   :1.000   Min.   : 1122   Min.   :1.000  
+ 1st Qu.:0.0000   1st Qu.:2.000   1st Qu.: 4740   1st Qu.:2.000  
+ Median :0.0000   Median :2.000   Median : 9382   Median :3.000  
+ Mean   :0.2048   Mean   :2.484   Mean   :13270   Mean   :2.958  
+ 3rd Qu.:0.0000   3rd Qu.:3.000   3rd Qu.:16640   3rd Qu.:4.000  
+ Max.   :1.0000   Max.   :4.000   Max.   :63770   Max.   :5.000  
+  bmi_category   CHARGE_split      
+ Min.   :1.000   Length:1338       
+ 1st Qu.:2.000   Class :character  
+ Median :2.000   Mode  :character  
+ Mean   :2.068                     
+ 3rd Qu.:2.000                     
+ Max.   :4.000                     
+  age sex    bmi children smoker region   charges age_category bmi_category
+1  19   1 27.900        0      1      1 16884.924            1            2
+2  18   0 33.770        1      0      2  1725.552            1            2
+3  28   0 33.000        3      0      2  4449.462            2            2
+4  33   0 22.705        0      0      3 21984.471            2            1
+5  32   0 28.880        0      0      3  3866.855            2            2
+6  31   1 25.740        0      0      2  3756.622            2            2
+  CHARGE_split
+1            1
+2            0
+3            0
+4            1
+5            0
+6            0
+
+	Kruskal-Wallis rank sum test
+
+data:  age by CHARGE_split
+Kruskal-Wallis chi-squared = 348.75, df = 1, p-value < 2.2e-16
+
+
+	Kruskal-Wallis rank sum test
+
+data:  sex by CHARGE_split
+Kruskal-Wallis chi-squared = 0.011951, df = 1, p-value = 0.9129
+
+
+	Kruskal-Wallis rank sum test
+
+data:  bmi by CHARGE_split
+Kruskal-Wallis chi-squared = 10.649, df = 1, p-value = 0.001102
+
+
+	Kruskal-Wallis rank sum test
+
+data:  children by CHARGE_split
+Kruskal-Wallis chi-squared = 0.13303, df = 1, p-value = 0.7153
+
+
+	Kruskal-Wallis rank sum test
+
+data:  smoker by CHARGE_split
+Kruskal-Wallis chi-squared = 344.3, df = 1, p-value < 2.2e-16
+
+
+	Kruskal-Wallis rank sum test
+
+data:  region by CHARGE_split
+Kruskal-Wallis chi-squared = 2.9441, df = 1, p-value = 0.08619
+
+
+	Kruskal-Wallis rank sum test
+
+data:  age by region
+Kruskal-Wallis chi-squared = 0.41382, df = 3, p-value = 0.9374
+
+
+	Kruskal-Wallis rank sum test
+
+data:  bmi by region
+Kruskal-Wallis chi-squared = 94.689, df = 3, p-value < 2.2e-16
+
+  Kruskal-Wallis rank sum test
+
+data: age and region
+Kruskal-Wallis chi-squared = 0.4138, df = 3, p-value = 0.94
+
+
+                          Comparison of age by region                          
+                                 (Bonferroni)                                  
+Col Mean-|
+Row Mean |   northeas   northwes   southeas
+---------+---------------------------------
+northwes |  -0.063679
+         |     1.0000
+         |
+southeas |   0.323533   0.389305
+         |     1.0000     1.0000
+         |
+southwes |  -0.302681  -0.239185  -0.635167
+         |     1.0000     1.0000     1.0000
+
+alpha = 0.05
+Reject Ho if p <= alpha/2
+  Kruskal-Wallis rank sum test
+
+data: bmi and region
+Kruskal-Wallis chi-squared = 94.6886, df = 3, p-value = 0
+
+
+                          Comparison of bmi by region                          
+                                 (Bonferroni)                                  
+Col Mean-|
+Row Mean |   northeas   northwes   southeas
+---------+---------------------------------
+northwes |  -0.139771
+         |     1.0000
+         |
+southeas |  -8.413665  -8.276738
+         |    0.0000*    0.0000*
+         |
+southwes |  -3.036924  -2.899387   5.296421
+         |    0.0072*    0.0112*    0.0000*
+
+alpha = 0.05
+Reject Ho if p <= alpha/2
+$chi2
+[1] 0.4138157
+
+$Z
+[1] -0.06367983  0.32353394  0.38930537 -0.30268141 -0.23918593 -0.63516753
+
+$P
+[1] 0.4746126 0.3731455 0.3485251 0.3810663 0.4054807 0.2626596
+
+$P.adjusted
+[1] 1 1 1 1 1 1
+
+$comparisons
+[1] "northeast - northwest" "northeast - southeast" "northwest - southeast"
+[4] "northeast - southwest" "northwest - southwest" "southeast - southwest"
+
+$chi2
+[1] 94.68857
+
+$Z
+[1] -0.1397714 -8.4136650 -8.2767381 -3.0369246 -2.8993878  5.2964216
+
+$P
+[1] 4.444203e-01 1.986973e-17 6.329761e-17 1.195026e-03 1.869461e-03
+[6] 5.904699e-08
+
+$P.adjusted
+[1] 1.000000e+00 1.192184e-16 3.797856e-16 7.170156e-03 1.121676e-02
+[6] 3.542820e-07
+
+$comparisons
+[1] "northeast - northwest" "northeast - southeast" "northwest - southeast"
+[4] "northeast - southwest" "northwest - southwest" "southeast - southwest"
+
