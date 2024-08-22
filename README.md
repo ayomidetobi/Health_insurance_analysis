@@ -54,6 +54,9 @@ We use the Kolmogorov-Smirnov test to evaluate the normality of the variables in
 
 ## Test of Independence and Association
 
+- **Null Hypothesis (H0)**: There is no association between the variable(I.e variable are independent). 
+- **Alternative Hypothesis (H1)**: there is an association between variable (I.e variable are dependent)
+
 ### Correlation Analysis
 
 | Variables         | Type of Test | r-value   | P-value     | Decision on H0 |
@@ -104,6 +107,12 @@ Charges = -13361.12 + 257.29(age) + 131.11(sex) + 332.57(bmi) + 479.37(children)
 ## Charge Split Analysis
 
 ### Kruskal-Wallis Test for Charge-Split
+
+Hypotheses:
+
+- **Null Hypothesis (H0)**: There is no significant difference in central tendencies of the predictor across charge-split
+
+- **Alternative Hypothesis (H1)**: There is a significant difference in central tendencies of the predictor across charge-split
 
 | Variable | Chi-squared | df | P-value   | Decision on H0 |
 |----------|-------------|----|-----------|----------------|
